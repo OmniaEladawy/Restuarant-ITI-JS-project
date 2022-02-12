@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Imperial+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      #headerc {
+        background-image: url("images/brk.png");
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="headerc">
+      <nav id="nav">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo" />
+            <span> Delicious </span>
+          </a>
+        </div>
+        <div class="sections">
+          <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About </a></li>
+            <li><a href="#"> Contact Us </a></li>
+            <li>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <div id="counter"><span> 0 </span></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 style="left: 40%">Contact Us</h1>
+    </header>
+    <form id="myForm" name="theForm" method="get" onsubmit=" validation(event)">
+      <div class="container">
+        <fieldset>
+          <legend>Contact Us</legend>
+          <div>
+            <label for="name"> Name </label>
+            <input
+              style="margin-left: 45px"
+              type="text"
+              id="name"
+              name="name"
+              onblur="nameValidate()"
+            />
+            <span id="textSpan"> Name is required </span> <br /><br />
+          </div>
+          <div>
+            <label for="email"> Email </label>
+            <input
+              type="Email"
+              id="email"
+              name="email"
+              onblur="emailValidate()"
+              style="margin-left: 45px"
+            />
+            <span id="emailSpan"> Email is not valid </span>
+          </div>
+          <div>
+            <label for="password"> Password </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              onkeydown="passwordValidate()"
+            />
+            <span id="passSpan">
+              Password is required and must be 8 chars at least
+            </span>
+          </div>
+          <div>
+            <label for="country">Counry</label>
+            <select
+              id="country"
+              name="country"
+              onblur="countryValidate()"
+              style="margin-left: 35px; width: 190px"
+            >
+              <option value=""></option>
+              <option value="Egypt">Egypt</option>
+              <option value="Italy">Italy</option>
+              <option value="Oman">Oman</option>
+              <option value="Canada">Canada</option>
+            </select>
+            <span id="countrySpan"> Please select your country </span>
+          </div>
+          <label style="margin-top: 45px"> Your Message </label>
+          <textarea name="msg"></textarea>
+          <button type="button" id="sub" onclick="submitForm()">
+            Contact Us
+          </button>
+        </fieldset>
+      </div>
+    </form>
+    <footer id="footer">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+        <span> Delicious </span>
+      </div>
+      <div id="contacts">
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/%D8%B3%D9%8A%D8%AA%D9%8A+%D8%B3%D9%86%D8%AA%D8%B1+%D8%A7%D9%84%D9%85%D8%A7%D8%B8%D8%A9%E2%80%AD/@30.0594699,31.3285047,12z/data=!4m13!1m7!3m6!1s0x14583fa60b21beeb:0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!3b1!8m2!3d30.0444196!4d31.2357116!3m4!1s0x14583df81720ed69:0xb597301dcb56aacf!8m2!3d30.0806383!4d31.3649739"
+              target="_blank"
+            >
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span> Cairo,Egypt </span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@gmail.com" target="_blank">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span> info@gmail.com </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa fa-facebook facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa fa-instagram insta" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/+201006598340" target="_blank">
+              <i class="fa fa-whatsapp whats" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div id="topBtn" onclick="topFunction()">
+      <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </div>
+    <script src="scripts/formScript.js"></script>
+  </body>
+</html>

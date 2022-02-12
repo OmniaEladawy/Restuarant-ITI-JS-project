@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Imperial+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo" />
+            <span> Delicious </span>
+          </a>
+        </div>
+        <div class="sections">
+          <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="about.html"> About </a></li>
+            <li><a href="contact.html"> Contact Us </a></li>
+            <li>
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <div id="counter"><span> 0 </span></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <i
+        class="fa fa-chevron-right"
+        aria-hidden="true"
+        id="arrow-right"
+        onclick="next()"
+      ></i>
+      <i
+        class="fa fa-chevron-left"
+        aria-hidden="true"
+        id="arrow-left"
+        onclick="previous()"
+      ></i>
+      <h1>Food with Love</h1>
+    </header>
+    <main>
+      <section id="intro">
+        <div id="left-side">
+          <h3>Choose & Taste</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consectetur asperiores quidem at, est vero perferendis labore ipsam
+            doloremque doloribus officiis totam tenetur magnam. Modi deserunt
+            molestias mollitia cum non architectoLorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Consectetur asperiores quidem at
+          </p>
+        </div>
+        <div id="right-side">
+          <img src="images/pizzaaaaa.png" />
+        </div>
+      </section>
+      <section id="menu">
+        <ul>
+          <li onclick="allProducts()" class="active">
+            All <small id="allCount"> (0) </small>
+          </li>
+          <li onclick="mainProducts()">
+            Main Meals <small id="mainCount"> (0) </small>
+          </li>
+          <li onclick="sandwitchProducts()">
+            Sandawitches <small id="sandCount"> (0) </small>
+          </li>
+          <li onclick="salSopProducts()">
+            Salads & Soups <small id="salCount"> (0) </small>
+          </li>
+          <li onclick="dessertProducts()">
+            Desserts <small id="dessertCount"> (0) </small>
+          </li>
+          <li onclick="drinkProducts()">
+            Drinks <small id="drinkCount"> (0) </small>
+          </li>
+        </ul>
+        <div id="menuContainer">
+          <div class="all main">
+            <img src="images/pizza.png" /> <br />
+            <span> Pizza </span>
+            <span> 18 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all drink">
+            <img src="images/Strawberry-Water.pg.jpg" />
+            <br />
+            <span> Strawberry-Water </span>
+            <span> 10 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all salSop">
+            <img src="images/Coleslaw.png" /> <br />
+            <span> Coleslaw </span>
+            <span> 5 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all main">
+            <img
+              src="images/charred-chicken-with-sweet-potatoes-and-oranges-BA-011917.png"
+            />
+            <br />
+            <span> charred Chicken </span>
+            <span> 27 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all dessert">
+            <img src="images/molten-cake.png" />
+            <br />
+            <span> Molton Cake </span>
+            <span> 13 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all sandwitch">
+            <img src="images/burger-sandwich.png" />
+            <br />
+            <span> Burger Sandawitch </span>
+            <span> 20 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all drink">
+            <img src="images/coffee.png" />
+            <br />
+            <span> Coffee </span>
+            <span> 5 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all salSop">
+            <img src="images/chicken-soup.png" />
+            <br />
+            <span> chicken Soup </span>
+            <span> 15 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all main">
+            <img src="images/grilled.png" />
+            <br />
+            <span> Grilled </span>
+            <span> 50 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all dessert">
+            <img src="images/waffel.png" />
+            <br />
+            <span> Waffel </span>
+            <span> 10 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all drink">
+            <img src="images/hot-chocolate.png" />
+            <br />
+            <span> Hot Chocolate </span>
+            <span> 15 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+
+          <div class="all sandwitch">
+            <img src="images/rotisserie.png" />
+            <br />
+            <span> Rotisserie </span>
+            <span> 25 $ </span>
+            <button onclick="addToCart()">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <span> Add to Card </span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="info">
+        <h4>Art of food</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et a culpa
+        nostrum dolorem accusamus laborum dolores officia nulla exercitationem,
+        voluptatem, illum amet, illo excepturi necessitatibus. Saepe voluptate
+        doloribus molestias sed
+        <button>Read More</button>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+        <span> Delicious </span>
+      </div>
+      <div id="contacts">
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/place/%D8%B3%D9%8A%D8%AA%D9%8A+%D8%B3%D9%86%D8%AA%D8%B1+%D8%A7%D9%84%D9%85%D8%A7%D8%B8%D8%A9%E2%80%AD/@30.0594699,31.3285047,12z/data=!4m13!1m7!3m6!1s0x14583fa60b21beeb:0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!3b1!8m2!3d30.0444196!4d31.2357116!3m4!1s0x14583df81720ed69:0xb597301dcb56aacf!8m2!3d30.0806383!4d31.3649739"
+              target="_blank"
+            >
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span> Cairo,Egypt </span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@gmail.com" target="_blank">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span> info@gmail.com </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fa fa-facebook facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa fa-instagram insta" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/+201006598340" target="_blank">
+              <i class="fa fa-whatsapp whats" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div id="topBtn" onclick="topFunction()">
+      <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
