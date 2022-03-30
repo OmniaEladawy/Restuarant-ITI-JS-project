@@ -2,4 +2,4 @@
 ITI Javascript project Restuarant website <br>
 Technologies used : Pure HTML5 , CSS3 & Javascript
 ## Live Demo : 
-https://oeladawy.github.io/Restuarant-ITI-JS-project/
+https://omniaeladawy.github.io/Restuarant-ITI-JS-project/
